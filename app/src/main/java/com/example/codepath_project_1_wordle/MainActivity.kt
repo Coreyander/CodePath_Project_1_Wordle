@@ -37,7 +37,8 @@ class MainActivity : AppCompatActivity() {
                 binding.instructions2.visibility = View.GONE
                 binding.instructions.visibility = View.GONE
             }
-            val guess = binding.guessEditText.text.toString().uppercase()
+            var guess = binding.guessEditText.text.toString().uppercase()
+            val check = checkGuess(guess, wordToGuess)
             binding.answerTextView.text = getString(R.string.answer, wordToGuess)
             //Toast.makeText(applicationContext, "Button Clicked", Toast.LENGTH_SHORT).show()
             if (!inputLengthErrorMessage(guess, it)) {
@@ -55,17 +56,17 @@ class MainActivity : AppCompatActivity() {
                     1 -> {
                         binding.guessTitleTextView1.visibility = View.VISIBLE
                         binding.guessDisplayTextView1.visibility = View.VISIBLE
-                        binding.guessDisplayTextView1.text = getString(R.string.guess_result, checkGuess(guess, wordToGuess), guess)
+                        binding.guessDisplayTextView1.text = getString(R.string.guess_result, check, guess)
                     }
                     2 -> {
                         binding.guessTitleTextView2.visibility = View.VISIBLE
                         binding.guessDisplayTextView2.visibility = View.VISIBLE
-                        binding.guessDisplayTextView2.text = getString(R.string.guess_result, checkGuess(guess, wordToGuess), guess)
+                        binding.guessDisplayTextView2.text = getString(R.string.guess_result, check, guess)
                     }
                     3 -> {
                         binding.guessTitleTextView3.visibility = View.VISIBLE
                         binding.guessDisplayTextView3.visibility = View.VISIBLE
-                        binding.guessDisplayTextView3.text = getString(R.string.guess_result, checkGuess(guess, wordToGuess), guess)
+                        binding.guessDisplayTextView3.text = getString(R.string.guess_result, check, guess)
                         disableButton(binding.btn)
                         binding.resetBtn.visibility = View.VISIBLE
                         binding.answerTextView.visibility = View.VISIBLE
@@ -115,7 +116,6 @@ class MainActivity : AppCompatActivity() {
  *   '+' represents the right letter in the wrong place
  *   'X' represents a letter not in the target word
  */
-
 
 private fun checkGuess(guess: String, wordToGuess: String) : String {
     var result = ""
