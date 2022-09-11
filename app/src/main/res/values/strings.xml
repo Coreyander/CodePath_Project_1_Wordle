@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">CodePath_Project_1_Wordle</string>
+    <string name="guess_hint">Enter Guess</string>
+    <string name="button">Submit</string>
+    <string name="reset_button">Replay</string>
+    <string name="enter_guess">Enter Guess</string>
+    <string name="answer">The Word to Guess was %s</string>
+    <string name="guess_one">Guess One</string>
+    <string name="guess_two">Guess Two</string>
+    <string name="guess_three">Guess Three</string>
+    <string name="guess_result">%s    %s</string>
+    <string name="instructions_title">\nHow to Play\n</string>
+    <string name="instructions">\nWelcome! This game is a lot like Wordle\n
+        You have 3 guesses to confirm a secret 4-letter word!\n\n
+        Each guess earns some hints!\n\n
+        An O means you guessed the right letter in the right place\n
+        An X means that letter isn\'t part of the word\n
+        A + sign indicates a letter that\'s part of the hidden word, but in the wrong place</string>
+    <string name="win_text">You successfully guessed the word %s!\nNice!</string>
+</resources>
