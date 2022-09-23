@@ -41,7 +41,9 @@ Edited by Veed.io
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Trying to find a way to color one letter at a time.
+Working with onCreate override and funcitons and getting them to communicate the way I wanted to.
+Passing views to functions.
 
 ## License
 
